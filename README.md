@@ -72,8 +72,14 @@ models:
   medgemma_checkpoint: "/path/to/your/medgemma/checkpoint"
 ```
 
+  
 ## Data Structure
 
+We need to create directories consisting of images without tools and some samples of different tools. Download the [images](https://huggingface.co/datasets/danushkv/surgical-cholec-inst) and the [tools](https://huggingface.co/datasets/danushkv/surgical-tools) and place them in a directory as shown below. For an exmple run, use the `dataset` directory for the different image and tools.
+
+
+<details>
+  <summary><b>Directory structure</b> (click to expand)</summary>
 Your data should be organized as follows:
 
 ### Base Images Directory
@@ -109,6 +115,7 @@ tool_regions/
 ```
 
 **Note**: Each tool needs corresponding RGB images and grayscale masks where white (255) indicates the tool region.
+</details>
 
 ## Usage
 
