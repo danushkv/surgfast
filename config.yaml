@@ -1,0 +1,90 @@
+# Configuration for Surgical Tool Composite GUI Server
+# Copy this file and update the paths to match your environment
+
+# ============================================================================
+# DATA PATHS - Update these to point to your datasets
+# ============================================================================
+data:
+  # Path to directory containing images without tools (surgical scenes)
+  no_tools_images_dir: "/path/to/your/no_tools_images"
+  
+  # Path to directory containing tool regions (images and masks)
+  # Should have subdirectories for each tool type (bipolar, grasper, scissors, etc.)
+  tool_regions_dir: "/path/to/your/tool_regions"
+  
+  # Output directory for composite images
+  output_dir: "./composite_images_output"
+
+# ============================================================================
+# MODEL PATHS - Update these to point to your model checkpoints
+# ============================================================================
+models:
+  # Stable Diffusion v1.5 base model
+  sd_base_model: "stable-diffusion-v1-5/stable-diffusion-v1-5"
+  
+  # Path to distilled UNet checkpoint (for image refinement)
+  sd_unet_checkpoint: "/path/to/your/sd-cholec-distill/checkpoint-4000"
+  
+  # Hugging Face cache directory (for downloading models)
+  huggingface_cache_dir: "/path/to/your/huggingface_cache"
+  
+  # MedGemma fine-tuned checkpoint (for image description)
+  medgemma_checkpoint: "/path/to/your/medgemma_cholec/checkpoint-1160"
+
+# ============================================================================
+# SERVER SETTINGS
+# ============================================================================
+server:
+  # Flask server host (0.0.0.0 = accessible from any machine)
+  host: "0.0.0.0"
+  
+  # Flask server port
+  port: 5000
+  
+  # Enable debug mode (set to false in production)
+  debug: false
+  
+  # Maximum file upload size in MB
+  max_content_length_mb: 100
+
+# ============================================================================
+# PROCESSING SETTINGS
+# ============================================================================
+processing:
+  # Number of base images to display at startup
+  default_base_images: 4
+  
+  # Image resolution for processing
+  image_resolution: 512
+  
+  # Guided diffusion strength (0.0 to 1.0)
+  guidance_strength: 0.7
+  
+  # Number of inference steps for SD pipeline
+  num_inference_steps: 4
+
+# ============================================================================
+# GPU SETTINGS
+# ============================================================================
+gpu:
+  # Device to use (cuda, cpu)
+  device: "cuda"
+  
+  # Enable memory optimization
+  optimize_memory: true
+  
+  # Data type for inference (float32, float16)
+  dtype: "float32"
+
+# ============================================================================
+# FEATURES
+# ============================================================================
+features:
+  # Enable MedGemma description generation (requires model)
+  use_medgemma: true
+  
+  # Enable image refinement with Stable Diffusion
+  use_diffusion: true
+  
+  # Enable bounding box drawing on output images
+  draw_bboxes: true
