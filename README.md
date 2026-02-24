@@ -15,6 +15,10 @@ An interactive web-based tool for (i) visualizing surgical tools in a scen with 
 - **Batch Processing**: Process multiple images in a single session
 - **Full Download Support**: Download processed images at full resolution
 
+<p align="center">
+  <img src="assets/SurgFasT_intro.gif" alt="SurgFasT intro" width="900" />
+</p>
+
 ## System Requirements
 
 - Python 3.9+
@@ -138,6 +142,10 @@ The server will:
 5. **View Results**: 
    - See the processed image with optional bounding box
    - Download full-resolution results
+
+<p align="center">
+  <img src="assets/tool_variation.pdf" alt="SurgFasT intro" width="900" />
+</p>
 
 ### Configuration Options
 
