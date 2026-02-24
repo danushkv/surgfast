@@ -162,8 +162,12 @@ The server will:
    - See the processed image with optional bounding box
    - Download full-resolution results
 
-![Figure](assets/chz3.png)
+![Figure](assets/chz2.png)
+The interface of the learning mode showing surgical tools and description from Medgemma
 
+
+![Figure](assets/chz3.png)
+The different synthetic surgical images generated with bounding box from the generation mode
 ### Configuration Options
 
 #### Processing Settings
