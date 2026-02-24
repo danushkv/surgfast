@@ -10,7 +10,6 @@ An interactive web-based tool for (i) visualizing surgical tools in a scen with 
 ## Features
 
 - **Interactive Web GUI**: Select base images and add surgical tools with flexible positioning and rotation
-- **Image Refinement**: Optionally process composites through a Stable Diffusion pipeline for realistic refinement
 - **Automatic Description Generation**: Use MedGemma to generate descriptive text for images (optional)
 - **Bounding Box Generation**: Automatically compute and visualize bounding boxes for composited tools
 - **Batch Processing**: Process multiple images in a single session
