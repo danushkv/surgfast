@@ -49,6 +49,18 @@ source venv/bin/activate  # On Windows: venv\Scripts\activate
 pip install -r requirements.txt
 ```
 
+### 4. Download models [Optional]
+
+Activate the environment and configure the parameter `cache_dir` in the script. Run
+
+```
+python download_models.py
+```
+This step would download the various sub-modules needed to run the diffusion and medgemma pipeline. This step saves a lot of time when running the server. 
+
+#### Setup pre-trained checkpoints
+The pre-trained Unet for the diffusion model needs to be downloaded from [here](https://huggingface.co/danushkv/sd-cholec-inst). 
+
 ### 4. Configure Paths
 
 1. Copy and edit the configuration file:
@@ -280,11 +292,11 @@ pipeline_args = {
 
 ## Future Enhancements
 
-- Multi-GPU support for parallel processing
-- Additional tool placement strategies (random, grid-based)
-- Custom prompt templates
-- Batch processing from command-line
-- Docker containerization
+- [] Multi-GPU support for parallel processing
+- [] Additional tool placement strategies (random, grid-based)
+- [] Custom prompt templates
+- [] Batch processing from command-line
+- [] Docker containerization
 
 ## Citation
 
