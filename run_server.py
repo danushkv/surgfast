@@ -91,8 +91,7 @@ def init_compositor():
         logger.info("Loading MedGemma pipeline...")
         try:
             medgemma_pipe, medgemma_processor = initialize_medgemma_pipeline(
-                cache_dir=config['models']['huggingface_cache_dir'],
-                ft_checkpoint_dir=config['models']['medgemma_checkpoint']
+                cache_dir=config['models']['huggingface_cache_dir']
             )
             logger.info("✓ MedGemma pipeline loaded")
             
