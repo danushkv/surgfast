@@ -359,8 +359,7 @@ class ToolCompositor:
 
 def initialize_medgemma_pipeline(
     model_id: str = "google/medgemma-1.5-4b-it",
-    cache_dir: str = None,
-    ft_checkpoint_dir: str = None
+    cache_dir: str = None
 ):
     """
     Initialize the MedGemma pipeline for image description generation.
