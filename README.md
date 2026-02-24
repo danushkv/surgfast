@@ -189,39 +189,42 @@ features:
 3. **Description Stage** (optional): Image → MedGemma → Text Description
 4. **Visualization**: Draw bounding boxes on output images
 
-## Troubleshooting
+<details>
+  <summary><b>Troubleshooting</b> (click to expand)</summary>
 
-### Out of Memory Error
+  ### Out of Memory Error
 
-**Solution**: 
-- Set `optimize_memory: true` in GPU settings
-- Disable MedGemma: `use_medgemma: false`
-- Reduce `num_inference_steps` to 1-4
-- Use `dtype: "float16"` for lower memory usage
+  **Solution**:
+  - Set `optimize_memory: true` in GPU settings
+  - Disable MedGemma: `use_medgemma: false`
+  - Reduce `num_inference_steps` to 1-4
+  - Use `dtype: "float16"` for lower memory usage
 
-### Model Download Fails
+  ### Model Download Fails
 
-**Solution**:
-- Set a valid `huggingface_cache_dir` in config
-- Ensure internet connection is stable
-- Pre-download models manually:
-  ```bash
-  huggingface-cli download google/medgemma-1.5-4b-it --cache-dir /your/cache/path
-  ```
+  **Solution**:
+  - Set a valid `huggingface_cache_dir` in config
+  - Ensure internet connection is stable
+  - Pre-download models manually:
+    ```bash
+    huggingface-cli download google/medgemma-1.5-4b-it --cache-dir /your/cache/path
+    ```
 
-### CUDA Not Found
+  ### CUDA Not Found
 
-**Solution**:
-- Verify CUDA installation: `nvidia-smi`
-- Check PyTorch CUDA compatibility
-- Use CPU mode temporarily: Set `device: "cpu"` in config
+  **Solution**:
+  - Verify CUDA installation: `nvidia-smi`
+  - Check PyTorch CUDA compatibility
+  - Use CPU mode temporarily: Set `device: "cpu"` in config
 
-### Tool Images Not Loading
+  ### Tool Images Not Loading
 
-**Solution**:
-- Verify `tool_regions_dir` structure matches expected layout
-- Ensure all tools have both `images/` and `masks/` subdirectories
-- Check file permissions on data directories
+  **Solution**:
+  - Verify `tool_regions_dir` structure matches expected layout
+  - Ensure all tools have both `images/` and `masks/` subdirectories
+  - Check file permissions on data directories
+
+</details>
 
 ## Advanced Usage
 
