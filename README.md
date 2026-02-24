@@ -143,9 +143,7 @@ The server will:
    - See the processed image with optional bounding box
    - Download full-resolution results
 
-<p align="center">
-  <img src="assets/tool_variation.pdf" alt="SurgFasT intro" width="900" />
-</p>
+![Figure](assets/chz3.png)
 
 ### Configuration Options
 
