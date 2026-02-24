@@ -28,9 +28,6 @@ models:
   # Hugging Face cache directory (for downloading models)
   huggingface_cache_dir: "/path/to/your/huggingface_cache"
   
-  # MedGemma fine-tuned checkpoint (for image description)
-  medgemma_checkpoint: "/path/to/your/medgemma_cholec/checkpoint-1160"
-
 # ============================================================================
 # SERVER SETTINGS
 # ============================================================================
