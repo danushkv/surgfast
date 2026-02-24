@@ -2,6 +2,11 @@
 
 An interactive web-based tool for (i) visualizing surgical tools in a scen with description from medGemma (ii) generating synthetic surgical training images with ground gruth bounding box labels 
 
+<p align="center">
+  <img src="assets/thumbnail_image.jpg" alt="SurgFasT banner" width="900" />
+</p>
+
+
 ## Features
 
 - **Interactive Web GUI**: Select base images and add surgical tools with flexible positioning and rotation
