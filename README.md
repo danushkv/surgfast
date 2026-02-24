@@ -1,6 +1,6 @@
-# Surgical Tool Composite GUI
+# SurgFasT
 
-An interactive web-based tool for generating synthetic surgical training images by compositing tool regions onto base surgical images. This system uses Flask for the web interface, Stable Diffusion for image refinement, and optionally MedGemma for generating image descriptions.
+An interactive web-based tool for (i) visualizing surgical tools in a scen with description from medGemma (ii) generating synthetic surgical training images with ground gruth bounding box labels 
 
 ## Features
 
@@ -13,9 +13,9 @@ An interactive web-based tool for generating synthetic surgical training images 
 
 ## System Requirements
 
-- Python 3.8+
-- CUDA-capable GPU with at least 12GB VRAM (24GB+ recommended for using MedGemma)
-- Linux (tested on Ubuntu 20.04+)
+- Python 3.9+
+- CUDA-capable GPU with at least 12GB VRAM
+- Linux (tested on Ubuntu 22.04+)
 
 ## Installation
 
@@ -223,13 +223,6 @@ features:
 - Ensure all tools have both `images/` and `masks/` subdirectories
 - Check file permissions on data directories
 
-## Performance Notes
-
-- **First run**: Slower due to model downloads and compilations
-- **MedGemma**: ~30-60 seconds per image on single image; uses significant GPU memory
-- **Stable Diffusion**: ~2-5 seconds per image depending on inference steps
-- **Memory usage**: ~12GB GPU memory for SD + optional MedGemma
-
 ## Advanced Usage
 
 ### Processing via Python Script
@@ -265,20 +258,12 @@ pipeline_args = {
 }
 ```
 
-## Limitations
-
-- Single-threaded processing (due to GPU constraints)
-- Requires GPU for reasonable performance
-- Tool images must have white background for transparency
-- Maximum supported image resolution: 1024x1024
-
 ## Future Enhancements
 
 - Multi-GPU support for parallel processing
 - Additional tool placement strategies (random, grid-based)
 - Custom prompt templates
 - Batch processing from command-line
-- REST API for external integrations
 - Docker containerization
 
 ## Citation
@@ -286,17 +271,12 @@ pipeline_args = {
 If you use this tool in your research, please cite:
 
 ```bibtex
-@software{surgical_tool_composite,
-  title={Surgical Tool Composite GUI},
-  author={Your Name},
+@software{surgfast,
+  title={SurgFasT: Fast-tracking Surgical science with medGemma},
+  author={Danush Kumar Venkatesh},
   year={2026},
-  url={https://github.com/yourusername/surgical-tool-composite}
 }
 ```
-
-## License
-
-[Specify your license here - e.g., MIT, Apache 2.0, etc.]
 
 ## Support
 
@@ -308,5 +288,4 @@ For issues, questions, or contributions:
 ## Acknowledgments
 
 - Stable Diffusion pipeline from [Hugging Face Diffusers](https://github.com/huggingface/diffusers)
-- MedGemma model from [Google](https://huggingface.co/google/medgemma-1.5-4b-it)
-- Flask framework for web interface
+- MedGemma model from [Google](https://huggingface.co/collections/google/health-ai-developer-foundations-hai-def)
