@@ -1,6 +1,6 @@
 # SurgFasT
 
-An interactive web-based tool for (i) visualizing surgical tools in a scen with description from medGemma (ii) generating synthetic surgical training images with ground gruth bounding box labels 
+An interactive web-based tool for (i) visualizing surgical tools in a scene with description from MedGemma (ii) generating synthetic surgical training images with ground truth bounding box labels 
 
 <p align="center">
   <img src="assets/thumbnail_image.jpg" alt="SurgFasT banner" width="900" />
